@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DebugAPI from "./DebugAPI";  // Ensure correct filename casing
-import ResponsePage from "./pages/ResponsePage"; 
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./pages/About";
+import DebugAPI from "./DebugAPI";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<DebugAPI />} />
-        <Route path="/response" element={<ResponsePage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/debug" element={<DebugAPI />} />
+    </Routes>
   );
 }
 
